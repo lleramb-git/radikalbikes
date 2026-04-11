@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RadikalBikesRace — Taller de Motos en Torrejón de la Calzada</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RadikalBikesRace — Taller de Motos">
+  <meta property="og:description" content="Taller especializado en mantenimiento, reparación y personalización de motos en Torrejón de la Calzada, Madrid.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/calendar.css">
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/calendar.js" defer></script>
+  <script src="js/timeSlots.js" defer></script>
+  <script src="js/bookingForm.js" defer></script>
+</head>
+<body>
+
+  <!-- Skip link para accesibilidad -->
+  <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a href="#hero" class="navbar__logo-link" aria-label="RadikalBikesRace — Inicio">
+        <img src="assets/logo.png" alt="Logo de RadikalBikesRace" class="navbar__logo" width="40" height="40">
+      </a>
+
+      <button class="navbar__toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+
+      <ul id="nav-menu" class="navbar__menu" role="list">
+        <li><a href="#hero" class="navbar__link">Inicio</a></li>
+        <li><a href="#servicios" class="navbar__link">Servicios</a></li>
+        <li><a href="#citas" class="navbar__link">Citas</a></li>
+        <li><a href="#ubicacion" class="navbar__link">Ubicación</a></li>
+        <li><a href="#contacto" class="navbar__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero" aria-label="Presentación del taller">
+      <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+        <source src="https://cdn.pixabay.com/video/2020/07/30/45349-445039301_large.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <img src="assets/logo.png" alt="Logo de RadikalBikesRace — Taller de motos" class="hero__logo" width="320" height="320">
+        <h1 class="hero__title">RadikalBikesRace</h1>
+        <p class="hero__slogan">Tu taller de confianza para motos — Pasión, potencia y precisión</p>
+        <a href="#citas" class="hero__cta">Reserva tu Cita</a>
+      </div>
+    </section>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section id="servicios" class="services" aria-label="Servicios del taller">
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <div class="services__grid">
+
+        <!-- Mantenimiento General -->
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Mantenimiento General</h3>
+          <p class="service-card__desc">Revisiones periódicas, cambio de aceite, filtros y puesta a punto para mantener tu moto en perfecto estado.</p>
+        </article>
+
+        <!-- Reparación de Motor -->
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Reparación de Motor</h3>
+          <p class="service-card__desc">Diagnóstico y reparación completa de motores. Desde ajustes menores hasta reconstrucciones totales.</p>
+        </article>
+
+        <!-- Diagnóstico -->
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Diagnóstico</h3>
+          <p class="service-card__desc">Análisis electrónico y mecánico para detectar fallos con precisión y ofrecerte la mejor solución.</p>
+        </article>
+
+        <!-- Preparación de Motos -->
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Preparación de Motos</h3>
+          <p class="service-card__desc">Preparamos tu moto para competición o uso intensivo. Optimización de rendimiento y seguridad.</p>
+        </article>
+
+        <!-- Personalización -->
+        <article class="service-card">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"/>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <h3 class="service-card__title">Personalización</h3>
+          <p class="service-card__desc">Dale a tu moto un estilo único. Pintura, accesorios, escapes y modificaciones a medida.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CITAS ===== -->
+    <section id="citas" class="appointments" aria-label="Reserva de citas">
+      <h2 class="section-title">Reserva tu Cita</h2>
+      <p class="appointments__intro">Consulta la disponibilidad y reserva tu cita directamente desde la web.</p>
+      <div class="appointments__wrapper">
+        <div id="calendar-container" class="appointments__calendar" aria-label="Calendario de disponibilidad"></div>
+        <div id="slots-container" class="appointments__slots" aria-label="Franjas horarias disponibles"></div>
+      </div>
+      <div id="booking-form-container" class="appointments__form-wrapper" aria-label="Formulario de reserva"></div>
+    </section>
+
+    <!-- ===== UBICACIÓN ===== -->
+    <section id="ubicacion" class="location" aria-label="Ubicación del taller">
+      <h2 class="section-title">Dónde Estamos</h2>
+      <div class="location__content">
+        <address class="location__address">
+          <p>C. de Eulalia Sauquillo, 6, Local,<br>28991 Torrejón de la Calzada, Madrid</p>
+        </address>
+        <div class="location__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.5!2d-3.7968!3d40.2003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4187c1a4e5b5b5%3A0x0!2sC.%20de%20Eulalia%20Sauquillo%2C%206%2C%2028991%20Torrej%C3%B3n%20de%20la%20Calzada%2C%20Madrid!5e0!3m2!1ses!2ses!4v1700000000000"
+            width="100%"
+            height="300"
+            style="border:0; min-height:300px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa de ubicación de RadikalBikesRace en Torrejón de la Calzada">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="contact" aria-label="Información de contacto">
+      <h2 class="section-title">Contacto</h2>
+      <div class="contact__content">
+
+        <div class="contact__item">
+          <svg class="contact__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <a href="tel:+34600000000" class="contact__link">+34 600 000 000</a>
+        </div>
+
+        <div class="contact__item">
+          <svg class="contact__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:info@radikalbikesrace.com" class="contact__link">info@radikalbikesrace.com</a>
+        </div>
+
+        <div class="contact__item">
+          <svg class="contact__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.47.957c.453.453.793.898.957 1.47.163.46.349 1.26.404 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.241 1.97-.404 2.43a4.088 4.088 0 0 1-.957 1.47 4.088 4.088 0 0 1-1.47.957c-.46.163-1.26.349-2.43.404-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.97-.241-2.43-.404a4.088 4.088 0 0 1-1.47-.957 4.088 4.088 0 0 1-.957-1.47c-.163-.46-.349-1.26-.404-2.43C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.055-1.17.241-1.97.404-2.43a4.088 4.088 0 0 1 .957-1.47A4.088 4.088 0 0 1 5.064 2.293c.46-.163 1.26-.349 2.43-.404C8.76 1.831 9.14 1.819 12 1.819zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.902.333 4.14.63a5.882 5.882 0 0 0-2.126 1.384A5.882 5.882 0 0 0 .63 4.14C.333 4.902.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.278.261 2.151.558 2.913a5.882 5.882 0 0 0 1.384 2.126 5.882 5.882 0 0 0 2.126 1.384c.762.297 1.635.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.059 2.151-.261 2.913-.558a5.882 5.882 0 0 0 2.126-1.384 5.882 5.882 0 0 0 1.384-2.126c.297-.762.499-1.635.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.059-1.278-.261-2.151-.558-2.913a5.882 5.882 0 0 0-1.384-2.126A5.882 5.882 0 0 0 19.86.63c-.762-.297-1.635-.499-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+          <a href="https://www.instagram.com/radicalbikesrace" target="_blank" rel="noopener noreferrer" class="contact__link">@radicalbikesrace</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="site-footer__content">
+      <p class="site-footer__copy">&copy; <span id="footer-year"></span> RadikalBikesRace</p>
+      <p class="site-footer__address">Torrejón de la Calzada, Madrid</p>
+      <a href="https://www.instagram.com/radicalbikesrace" target="_blank" rel="noopener noreferrer" class="site-footer__social" aria-label="Instagram de RadikalBikesRace">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.47.957c.453.453.793.898.957 1.47.163.46.349 1.26.404 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.241 1.97-.404 2.43a4.088 4.088 0 0 1-.957 1.47 4.088 4.088 0 0 1-1.47.957c-.46.163-1.26.349-2.43.404-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.97-.241-2.43-.404a4.088 4.088 0 0 1-1.47-.957 4.088 4.088 0 0 1-.957-1.47c-.163-.46-.349-1.26-.404-2.43C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.055-1.17.241-1.97.404-2.43a4.088 4.088 0 0 1 .957-1.47A4.088 4.088 0 0 1 5.064 2.293c.46-.163 1.26-.349 2.43-.404C8.76 1.831 9.14 1.819 12 1.819zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.902.333 4.14.63a5.882 5.882 0 0 0-2.126 1.384A5.882 5.882 0 0 0 .63 4.14C.333 4.902.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.278.261 2.151.558 2.913a5.882 5.882 0 0 0 1.384 2.126 5.882 5.882 0 0 0 2.126 1.384c.762.297 1.635.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.059 2.151-.261 2.913-.558a5.882 5.882 0 0 0 2.126-1.384 5.882 5.882 0 0 0 1.384-2.126c.297-.762.499-1.635.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.059-1.278-.261-2.151-.558-2.913a5.882 5.882 0 0 0-1.384-2.126A5.882 5.882 0 0 0 19.86.63c-.762-.297-1.635-.499-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</body>
+</html>

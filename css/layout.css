@@ -1,0 +1,160 @@
+/* ==========================================================================
+   RadikalBikesRace — Layout & Grid Responsive
+   Breakpoints: desktop ≥1024px · tablet 768–1023px · mobile <768px
+   ========================================================================== */
+
+/* ---- Contenedor genérico ---- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+}
+
+/* ---- Secciones ---- */
+section {
+  padding-block: var(--space-4xl);
+}
+
+/* ---- Título de sección ---- */
+.section-title {
+  text-align: center;
+  font-size: var(--fs-3xl);
+  margin-bottom: var(--space-3xl);
+  color: var(--color-white);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-cyan));
+  margin: var(--space-md) auto 0;
+}
+
+/* ---- Services grid ---- */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+}
+
+/* ---- Appointments wrapper ---- */
+.appointments__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  padding-inline: var(--space-xl);
+}
+
+.appointments__calendar,
+.appointments__slots {
+  width: 100%;
+  max-width: 100%;
+}
+
+.appointments__form-wrapper {
+  padding-inline: var(--space-xl);
+  width: 100%;
+}
+
+/* ---- Location content ---- */
+.location__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-2xl);
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+  align-items: start;
+}
+
+/* ---- Contact content ---- */
+.contact__content {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3xl);
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+}
+
+/* ---- Footer content ---- */
+.site-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--space-xl);
+}
+
+/* ==========================================================================
+   Tablet (768px – 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .location__content {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: var(--fs-2xl);
+  }
+}
+
+/* ==========================================================================
+   Mobile (<768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  section {
+    padding-block: var(--space-2xl);
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    padding-inline: var(--space-md);
+  }
+
+  .appointments__wrapper {
+    grid-template-columns: 1fr;
+    padding-inline: var(--space-md);
+  }
+
+  .appointments__form-wrapper {
+    padding-inline: var(--space-md);
+  }
+
+  .location__content {
+    padding-inline: var(--space-md);
+  }
+
+  .contact__content {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    padding-inline: var(--space-md);
+  }
+
+  .site-footer__content {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+    padding-inline: var(--space-md);
+  }
+
+  .section-title {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--space-xl);
+  }
+}

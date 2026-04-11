@@ -1,0 +1,21 @@
+{
+  "name": "radikalbikesrace",
+  "version": "1.0.0",
+  "description": "Sitio web para el taller de motos RadikalBikesRace — Torrejón de la Calzada, Madrid",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "vitest --run"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "better-sqlite3": "^11.6.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.0",
+    "fast-check": "^3.22.0",
+    "jsdom": "^25.0.0",
+    "supertest": "^7.0.0"
+  }
+}
