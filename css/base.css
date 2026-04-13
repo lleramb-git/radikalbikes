@@ -109,3 +109,255 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   border: 0;
 }
+
+/* ==========================================================================
+   ACCESSIBILITY WIDGET
+   ========================================================================== */
+.accessibility-widget {
+  position: fixed;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  z-index: 999;
+}
+
+.accessibility-widget__toggle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-cyan) 100%);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.accessibility-widget__toggle:hover,
+.accessibility-widget__toggle:focus-visible {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(10, 132, 255, 0.4);
+}
+
+.accessibility-widget__toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.accessibility-widget__panel {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 250px;
+  background: linear-gradient(145deg, var(--color-mid) 0%, var(--color-dark) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transition-base), visibility var(--transition-base), transform var(--transition-base);
+}
+
+.accessibility-widget__panel.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.accessibility-widget__title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.accessibility-widget__options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.accessibility-widget__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background-color: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  text-align: left;
+}
+
+.accessibility-widget__option:hover,
+.accessibility-widget__option:focus-visible {
+  background-color: rgba(0, 212, 255, 0.15);
+  border-color: var(--color-cyan);
+  color: var(--color-white);
+}
+
+.accessibility-widget__icon {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-lg);
+  color: var(--color-cyan);
+  min-width: 24px;
+  text-align: center;
+}
+
+/* High contrast mode */
+body.high-contrast {
+  --color-black: #000000;
+  --color-dark: #000000;
+  --color-mid: #1a1a1a;
+  --color-text: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-accent: #ffff00;
+  --color-cyan: #00ffff;
+  --color-orange: #ffff00;
+  --color-white: #ffffff;
+}
+
+body.high-contrast .service-card,
+body.high-contrast .review-card,
+body.high-contrast .calendar,
+body.high-contrast .slots,
+body.high-contrast .booking-form {
+  border: 3px solid #ffffff !important;
+  background: #000000 !important;
+}
+
+body.high-contrast .navbar {
+  background-color: #000000 !important;
+  border-bottom: 3px solid #ffffff !important;
+}
+
+body.high-contrast .hero__cta,
+body.high-contrast .reviews__link,
+body.high-contrast .booking-form__submit {
+  background: #ffff00 !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+}
+
+body.high-contrast .hero__cta:hover,
+body.high-contrast .reviews__link:hover,
+body.high-contrast .booking-form__submit:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.high-contrast .navbar__link,
+body.high-contrast .service-card__title,
+body.high-contrast .section-title,
+body.high-contrast .hero__title {
+  color: #ffffff !important;
+}
+
+body.high-contrast .service-card__icon,
+body.high-contrast .contact__icon,
+body.high-contrast .review-card__author {
+  color: #ffff00 !important;
+}
+
+body.high-contrast .calendar__day.available,
+body.high-contrast .slot-btn {
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+body.high-contrast .calendar__day.available:hover,
+body.high-contrast .slot-btn:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.high-contrast .reviews__star {
+  color: #ffff00 !important;
+  text-shadow: none !important;
+}
+
+body.high-contrast .site-header {
+  background-color: #000000 !important;
+  border-bottom: 3px solid #ffffff !important;
+}
+
+/* Font size adjustments */
+body.font-large {
+  font-size: 1.25rem !important;
+}
+
+body.font-large .section-title {
+  font-size: 3rem !important;
+}
+
+body.font-large .hero__title {
+  font-size: 4rem !important;
+}
+
+body.font-large .service-card__title,
+body.font-large .navbar__link {
+  font-size: 1.25rem !important;
+}
+
+body.font-xlarge {
+  font-size: 1.5rem !important;
+}
+
+body.font-xlarge .section-title {
+  font-size: 3.5rem !important;
+}
+
+body.font-xlarge .hero__title {
+  font-size: 4.5rem !important;
+}
+
+body.font-xlarge .service-card__title,
+body.font-xlarge .navbar__link {
+  font-size: 1.5rem !important;
+}
+
+body.font-xxlarge {
+  font-size: 1.75rem !important;
+}
+
+body.font-xxlarge .section-title {
+  font-size: 4rem !important;
+}
+
+body.font-xxlarge .hero__title {
+  font-size: 5rem !important;
+}
+
+body.font-xxlarge .service-card__title,
+body.font-xxlarge .navbar__link {
+  font-size: 1.75rem !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .accessibility-widget {
+    bottom: var(--space-md);
+    right: var(--space-md);
+  }
+
+  .accessibility-widget__toggle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .accessibility-widget__panel {
+    width: 220px;
+  }
+}

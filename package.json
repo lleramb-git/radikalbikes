@@ -8,14 +8,14 @@
     "test": "vitest --run"
   },
   "dependencies": {
-    "express": "^4.21.0",
-    "better-sqlite3": "^11.6.0",
-    "cors": "^2.8.5"
+    "better-sqlite3": "^11.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
   },
   "devDependencies": {
-    "vitest": "^2.1.0",
     "fast-check": "^3.22.0",
     "jsdom": "^25.0.0",
-    "supertest": "^7.0.0"
+    "supertest": "^7.0.0",
+    "vitest": "^4.1.4"
   }
 }

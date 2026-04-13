@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RadikalBikesRace — Taller de Motos en Torrejón de la Calzada</title>
+  <title>RadicalBikesRace — Taller de Motos en Torrejón de la Calzada</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
 
   <!-- Open Graph -->
   <meta property="og:title" content="RadikalBikesRace — Taller de Motos">
@@ -28,11 +31,41 @@
   <script src="js/calendar.js" defer></script>
   <script src="js/timeSlots.js" defer></script>
   <script src="js/bookingForm.js" defer></script>
+  <script src="js/reviews.js" defer></script>
+  <script src="js/accessibility.js" defer></script>
 </head>
 <body>
 
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+  <!-- Botón de accesibilidad -->
+  <div class="accessibility-widget">
+    <button class="accessibility-widget__toggle" id="accessibility-toggle" aria-label="Abrir opciones de accesibilidad" aria-expanded="false">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 16v-4"/>
+        <path d="M12 8h.01"/>
+      </svg>
+    </button>
+    <div class="accessibility-widget__panel" id="accessibility-panel">
+      <h3 class="accessibility-widget__title">Accesibilidad</h3>
+      <div class="accessibility-widget__options">
+        <button class="accessibility-widget__option" id="increase-font">
+          <span class="accessibility-widget__icon">A+</span>
+          <span>Aumentar texto</span>
+        </button>
+        <button class="accessibility-widget__option" id="high-contrast">
+          <span class="accessibility-widget__icon">◐</span>
+          <span>Alto contraste</span>
+        </button>
+        <button class="accessibility-widget__option" id="reset-accessibility">
+          <span class="accessibility-widget__icon">↺</span>
+          <span>Restablecer</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- ========== HEADER / NAV ========== -->
   <header class="site-header">
@@ -50,6 +83,7 @@
       <ul id="nav-menu" class="navbar__menu" role="list">
         <li><a href="#hero" class="navbar__link">Inicio</a></li>
         <li><a href="#servicios" class="navbar__link">Servicios</a></li>
+        <li><a href="#resenas" class="navbar__link">Reseñas</a></li>
         <li><a href="#citas" class="navbar__link">Citas</a></li>
         <li><a href="#ubicacion" class="navbar__link">Ubicación</a></li>
         <li><a href="#contacto" class="navbar__link">Contacto</a></li>
@@ -139,10 +173,79 @@
       </div>
     </section>
 
+    <!-- ===== RESEÑAS ===== -->
+    <section id="resenas" class="reviews" aria-label="Reseñas de clientes">
+      <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+      <div class="reviews__content">
+        <div class="reviews__rating-summary">
+          <div class="reviews__stars">
+            <span class="reviews__star">★</span>
+            <span class="reviews__star">★</span>
+            <span class="reviews__star">★</span>
+            <span class="reviews__star">★</span>
+            <span class="reviews__star reviews__star--half">★</span>
+          </div>
+          <div class="reviews__score">
+            <span class="reviews__score-number">4.6</span>
+            <span class="reviews__score-total">/ 5</span>
+          </div>
+          <p class="reviews__count">76 reseñas en Google</p>
+        </div>
+
+        <div class="reviews__carousel">
+          <div class="reviews__carousel-track" id="reviews-track">
+            
+            <!-- Reseña 1 -->
+            <div class="review-card active">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">"He tenido la suerte y la grata experiencia de haber coincidido con el Taller de RadicalBikesRaces tienen un excelente servicio y un personal capacitado, lo recomiendo no solo porque tendrán la certeza de tener un buen trato sino que también les transmitirán confianza y seguridad en el trabajo que les realicen en sus motos."</p>
+              <p class="review-card__author">— Ingrid Alonzo Arambu</p>
+            </div>
+
+            <!-- Reseña 2 -->
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">"Buen taller. Atienden muy rápido, son super efectivos, el propietario es muy amable y los trabajos son de calidad. Lo recomiendo para cualquiera que tenga una moto sea del estilo y cilindrada que sea y quiera buena atención y servicio."</p>
+              <p class="review-card__author">— Ab-el Lottatore R1</p>
+            </div>
+
+            <!-- Reseña 3 -->
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">"He pasado una revisión completa de mi vstrom y un fallo que tenía del nivel de combustible. Recomiendo 100%. Me lo quedo como mi taller, precio y trato genial."</p>
+              <p class="review-card__author">— Daniel fructuoso elvira</p>
+            </div>
+
+            <!-- Reseña 4 -->
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">"100% recomendable, exquisita seriedad y compromiso, muy profesionales, muy buena atención, en su filosofía no hay espacio para el engaño, son transparentes en todo, os lo recomiendo sin ninguna duda."</p>
+              <p class="review-card__author">— Juan Antonio Valencia</p>
+            </div>
+
+            <!-- Reseña 5 -->
+            <div class="review-card">
+              <div class="review-card__stars">★★★★★</div>
+              <p class="review-card__text">"Encantado con el trato recibido, muy profesional y rápido. Volveré sin duda cuando lo necesite. Muchas gracias :)"</p>
+              <p class="review-card__author">— Marco Ceriani Esteban</p>
+            </div>
+
+          </div>
+          <div class="reviews__dots" id="reviews-dots"></div>
+        </div>
+
+        <div class="reviews__cta">
+          <a href="https://www.google.com/maps/place/Taller+de+Motos+Radical+Bikes+Race/@40.2026551,-3.8003027,17.25z/data=!4m18!1m9!3m8!1s0xd41f542434845f9:0xc54e69f515a13642!2sTaller+de+Motos+Radical+Bikes+Race!8m2!3d40.2023149!4d-3.8008229!9m1!1b1!16s%2Fg%2F11kk62_gfj!3m7!1s0xd41f542434845f9:0xc54e69f515a13642!8m2!3d40.2023149!4d-3.8008229!9m1!1b1!16s%2Fg%2F11kk62_gfj?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="reviews__link">
+            Ver todas las reseñas en Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CITAS ===== -->
     <section id="citas" class="appointments" aria-label="Reserva de citas">
       <h2 class="section-title">Reserva tu Cita</h2>
-      <p class="appointments__intro">Consulta la disponibilidad y reserva tu cita directamente desde la web.</p>
+      <p class="appointments__intro">Consulta la disponibilidad y reserva tu cita directamente desde la web. Abiertos de Lunes a Jueves 10:00 - 15:00 / 17:00 - 19:00</p>
       <div class="appointments__wrapper">
         <div id="calendar-container" class="appointments__calendar" aria-label="Calendario de disponibilidad"></div>
         <div id="slots-container" class="appointments__slots" aria-label="Franjas horarias disponibles"></div>
@@ -209,11 +312,7 @@
     <div class="site-footer__content">
       <p class="site-footer__copy">&copy; <span id="footer-year"></span> RadikalBikesRace</p>
       <p class="site-footer__address">Torrejón de la Calzada, Madrid</p>
-      <a href="https://www.instagram.com/radicalbikesrace" target="_blank" rel="noopener noreferrer" class="site-footer__social" aria-label="Instagram de RadikalBikesRace">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 0 1 1.47.957c.453.453.793.898.957 1.47.163.46.349 1.26.404 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.241 1.97-.404 2.43a4.088 4.088 0 0 1-.957 1.47 4.088 4.088 0 0 1-1.47.957c-.46.163-1.26.349-2.43.404-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.97-.241-2.43-.404a4.088 4.088 0 0 1-1.47-.957 4.088 4.088 0 0 1-.957-1.47c-.163-.46-.349-1.26-.404-2.43C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.055-1.17.241-1.97.404-2.43a4.088 4.088 0 0 1 .957-1.47A4.088 4.088 0 0 1 5.064 2.293c.46-.163 1.26-.349 2.43-.404C8.76 1.831 9.14 1.819 12 1.819zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.902.333 4.14.63a5.882 5.882 0 0 0-2.126 1.384A5.882 5.882 0 0 0 .63 4.14C.333 4.902.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.278.261 2.151.558 2.913a5.882 5.882 0 0 0 1.384 2.126 5.882 5.882 0 0 0 2.126 1.384c.762.297 1.635.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.059 2.151-.261 2.913-.558a5.882 5.882 0 0 0 2.126-1.384 5.882 5.882 0 0 0 1.384-2.126c.297-.762.499-1.635.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.059-1.278-.261-2.151-.558-2.913a5.882 5.882 0 0 0-1.384-2.126A5.882 5.882 0 0 0 19.86.63c-.762-.297-1.635-.499-2.913-.558C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-        </svg>
-      </a>
+      <p class="site-footer__hours">Lunes a Jueves 10:00 - 15:00 / 17:00 - 19:00</p>
     </div>
   </footer>
 

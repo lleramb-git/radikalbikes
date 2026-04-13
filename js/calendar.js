@@ -188,6 +188,14 @@
     if (_selectCallback) {
       _selectCallback(dateStr);
     }
+
+    // Smooth scroll to time slots section
+    setTimeout(function() {
+      var slotsContainer = document.getElementById('slots-container');
+      if (slotsContainer) {
+        slotsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }, 100);
   }
 
   /* ------------------------------------------------------------------ */

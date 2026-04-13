@@ -36,12 +36,18 @@ section {
 
 /* ---- Services grid ---- */
 .services__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-xl);
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: var(--space-xl);
+  justify-content: center;
+}
+
+.services__grid .service-card {
+  flex: 0 0 calc(33.333% - var(--space-xl));
+  max-width: calc(33.333% - var(--space-xl));
 }
 
 /* ---- Appointments wrapper ---- */
@@ -53,15 +59,29 @@ section {
   padding-inline: var(--space-xl);
 }
 
-.appointments__calendar,
+.appointments__calendar {
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto !important;
+}
+
 .appointments__slots {
   width: 100%;
-  max-width: 100%;
+  max-width: 700px;
+  margin-inline: auto !important;
 }
 
 .appointments__form-wrapper {
   padding-inline: var(--space-xl);
   width: 100%;
+  max-width: 700px;
+  margin-inline: auto !important;
+}
+
+.booking-form {
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto !important;
 }
 
 /* ---- Location content ---- */
@@ -91,6 +111,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-xl);
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: var(--space-xl);
@@ -100,8 +121,9 @@ section {
    Tablet (768px – 1023px)
    ========================================================================== */
 @media (max-width: 1023px) {
-  .services__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .services__grid .service-card {
+    flex: 0 0 calc(50% - var(--space-xl));
+    max-width: calc(50% - var(--space-xl));
   }
 
   .location__content {
@@ -122,8 +144,12 @@ section {
   }
 
   .services__grid {
-    grid-template-columns: 1fr;
     padding-inline: var(--space-md);
+  }
+
+  .services__grid .service-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .appointments__wrapper {
