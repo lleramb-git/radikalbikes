@@ -71,3 +71,117 @@
   --focus-ring: 2px solid var(--color-cyan);
   --focus-offset: 2px;
 }
+
+
+/* ==========================================================================
+   LIGHT MODE
+   ========================================================================== */
+body.light-mode {
+  --color-black: #ffffff;
+  --color-dark: #f5f5f7;
+  --color-mid: #e8e8ed;
+  --color-text: #1d1d1f;
+  --color-text-muted: #6e6e73;
+  --color-white: #000000;
+  --color-accent: #0071e3;
+  --color-accent-hover: #0077ed;
+  --color-cyan: #0071e3;
+  --color-orange: #ff6b35;
+}
+
+body.light-mode .site-header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .navbar__link {
+  color: #1d1d1f !important;
+}
+
+body.light-mode .navbar__link:hover {
+  color: #0071e3 !important;
+}
+
+body.light-mode .hero__overlay {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+}
+
+body.light-mode .hero__title {
+  background: linear-gradient(135deg, #000000 0%, #0071e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-mode .service-card,
+body.light-mode .review-card,
+body.light-mode .calendar,
+body.light-mode .slots,
+body.light-mode .booking-form,
+body.light-mode .reviews__rating-summary {
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f7 100%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .service-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 113, 227, 0.15) !important;
+  border-color: rgba(0, 113, 227, 0.3) !important;
+}
+
+body.light-mode .services,
+body.light-mode .reviews,
+body.light-mode .location {
+  background-color: #f5f5f7 !important;
+  border-top: 3px solid rgba(0, 113, 227, 0.3) !important;
+}
+
+body.light-mode .appointments,
+body.light-mode .contact {
+  background-color: #ffffff !important;
+  border-top: 3px solid rgba(0, 113, 227, 0.3) !important;
+}
+
+body.light-mode .site-footer {
+  background-color: #f5f5f7 !important;
+  border-top: 3px solid rgba(0, 113, 227, 0.3) !important;
+}
+
+body.light-mode .calendar__day.available,
+body.light-mode .slot-btn {
+  background-color: rgba(0, 113, 227, 0.1) !important;
+  color: #0071e3 !important;
+  border-color: rgba(0, 113, 227, 0.3) !important;
+}
+
+body.light-mode .calendar__day.available:hover,
+body.light-mode .slot-btn:hover {
+  background-color: #0071e3 !important;
+  color: #ffffff !important;
+}
+
+body.light-mode .accessibility-widget__panel {
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f7 100%) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-mode .accessibility-widget__option {
+  background-color: rgba(0, 113, 227, 0.05) !important;
+  border: 1px solid rgba(0, 113, 227, 0.15) !important;
+}
+
+body.light-mode .accessibility-widget__option:hover {
+  background-color: rgba(0, 113, 227, 0.1) !important;
+  border-color: #0071e3 !important;
+}
+
+
+body.light-mode .navbar__menu {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-mode .navbar__toggle-bar {
+  background-color: #1d1d1f !important;
+}
