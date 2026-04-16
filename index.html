@@ -25,9 +25,11 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="css/gallery.css">
 
   <!-- JS -->
   <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
   <script src="js/calendar.js" defer></script>
   <script src="js/timeSlots.js" defer></script>
   <script src="js/bookingForm.js" defer></script>
@@ -92,6 +94,7 @@
         <li><a href="#hero" class="navbar__link">Inicio</a></li>
         <li><a href="#servicios" class="navbar__link">Servicios</a></li>
         <li><a href="#resenas" class="navbar__link">Reseñas</a></li>
+        <li><a href="#galeria" class="navbar__link">Galería</a></li>
         <li><a href="#citas" class="navbar__link">Citas</a></li>
         <li><a href="#ubicacion" class="navbar__link">Ubicación</a></li>
         <li><a href="#contacto" class="navbar__link">Contacto</a></li>
@@ -249,6 +252,90 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== GALERÍA ===== -->
+    <section id="galeria" class="gallery" aria-label="Galería de trabajos">
+      <h2 class="section-title">Nuestros Trabajos</h2>
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--wide" data-index="0">
+          <img src="assets/gallery/moto-01.jpg" alt="Trabajo realizado en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item" data-index="1">
+          <img src="assets/gallery/moto-02.jpg" alt="Moto en el taller RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item" data-index="2">
+          <img src="assets/gallery/moto-03.jpg" alt="Trabajo de taller en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item gallery__item--tall" data-index="3">
+          <img src="assets/gallery/moto-04.jpg" alt="Moto personalizada en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item" data-index="4">
+          <img src="assets/gallery/moto-05.jpg" alt="Detalle de trabajo en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item gallery__item--wide" data-index="5">
+          <img src="assets/gallery/moto-06.jpg" alt="Taller RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item" data-index="6">
+          <img src="assets/gallery/moto-07.jpg" alt="Moto en reparación en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item gallery__item--tall" data-index="7">
+          <img src="assets/gallery/moto-08.jpg" alt="Trabajo mecánico en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item" data-index="8">
+          <img src="assets/gallery/moto-09.jpg" alt="Exposición de piezas en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item" data-index="9">
+          <img src="assets/gallery/moto-10.jpg" alt="Moto preparada en RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+        <div class="gallery__item gallery__item--wide" data-index="10">
+          <img src="assets/gallery/moto-11.jpg" alt="Vista del taller RadikalBikesRace" loading="lazy">
+          <div class="gallery__item-overlay">
+            <span class="gallery__item-icon">⊕</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Visor de imagen" aria-hidden="true">
+      <button class="lightbox__close" aria-label="Cerrar visor">&times;</button>
+      <button class="lightbox__prev" aria-label="Imagen anterior">&#8249;</button>
+      <button class="lightbox__next" aria-label="Imagen siguiente">&#8250;</button>
+      <div class="lightbox__content">
+        <img class="lightbox__img" id="lightbox-img" src="" alt="">
+        <p class="lightbox__counter" id="lightbox-counter"></p>
+      </div>
+    </div>
 
     <!-- ===== CITAS ===== -->
     <section id="citas" class="appointments" aria-label="Reserva de citas">
