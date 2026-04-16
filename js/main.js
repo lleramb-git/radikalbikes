@@ -141,6 +141,28 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /*  Hero video rotation                                               */
+  /* ------------------------------------------------------------------ */
+  var heroVideos = [
+    'https://videos.pexels.com/video-files/2556610/2556610-hd_1920_1080_30fps.mp4',
+    'https://videos.pexels.com/video-files/2491284/2491284-hd_1920_1080_24fps.mp4',
+    'https://videos.pexels.com/video-files/4488057/4488057-hd_1920_1080_25fps.mp4'
+  ];
+  var currentVideoIndex = 0;
+
+  function initHeroVideoRotation() {
+    var video = document.getElementById('hero-video');
+    if (!video) return;
+
+    video.addEventListener('ended', function () {
+      currentVideoIndex = (currentVideoIndex + 1) % heroVideos.length;
+      video.src = heroVideos[currentVideoIndex];
+      video.load();
+      video.play();
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
   /*  Punto de entrada                                                  */
   /* ------------------------------------------------------------------ */
   function init() {
@@ -149,6 +171,7 @@
     initSmoothScroll();
     initKeyboardNav();
     initModules();
+    initHeroVideoRotation();
   }
 
   document.addEventListener('DOMContentLoaded', init);
