@@ -202,25 +202,28 @@
   /*  Fetch availability                                                */
   /* ------------------------------------------------------------------ */
 
+  function generateDemoAvailability(year, month) {
+    var days = [];
+    var totalDays = daysInMonth(year, month);
+    for (var d = 1; d <= totalDays; d++) {
+      var date = new Date(year, month, d);
+      var dayOfWeek = date.getDay();
+      // Mon-Fri available, weekends not
+      var available = dayOfWeek >= 1 && dayOfWeek <= 5;
+      days.push({
+        date: formatDate(year, month, d),
+        available: available
+      });
+    }
+    return days;
+  }
+
   function fetchAvailability(year, month) {
     if (!_container) return Promise.resolve([]);
 
-    showLoading();
-
-    return fetch('/api/availability/' + year + '/' + (month + 1))
-      .then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then(function (data) {
-        var days = data.days || [];
-        render(days);
-        return days;
-      })
-      .catch(function () {
-        showError();
-        return [];
-      });
+    var days = generateDemoAvailability(year, month);
+    render(days);
+    return Promise.resolve(days);
   }
 
   /* ------------------------------------------------------------------ */

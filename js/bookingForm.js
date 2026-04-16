@@ -175,16 +175,21 @@
   }
 
   function submit(data) {
-    return fetch('/api/bookings', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    })
-      .then(function (res) {
-        return res.json().then(function (body) {
-          return { status: res.status, body: body };
-        });
-      });
+    // Demo mode: simulate successful booking
+    return Promise.resolve({
+      status: 201,
+      body: {
+        success: true,
+        booking: {
+          id: 'demo-' + Date.now(),
+          date: data.date,
+          time: _currentSlot ? _currentSlot.time : '',
+          name: data.name,
+          bikeModel: data.bikeModel,
+          serviceDescription: data.serviceDescription
+        }
+      }
+    });
   }
 
   /* ------------------------------------------------------------------ */

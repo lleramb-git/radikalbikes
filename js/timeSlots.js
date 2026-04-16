@@ -110,27 +110,34 @@
   /*  Fetch slots                                                       */
   /* ------------------------------------------------------------------ */
 
+  function generateDemoSlots(date) {
+    var morningHours = ['09:00', '10:00', '11:00', '12:00', '13:00', '14:00'];
+    var afternoonHours = ['17:00', '18:00', '19:00'];
+    var allHours = morningHours.concat(afternoonHours);
+    var slots = [];
+
+    for (var i = 0; i < allHours.length; i++) {
+      var timeCompact = allHours[i].replace(':', '');
+      // Randomly mark some as unavailable for demo realism
+      var available = Math.random() > 0.3;
+      slots.push({
+        id: 'slot-' + date + '-' + timeCompact,
+        time: allHours[i],
+        available: available
+      });
+    }
+    return slots;
+  }
+
   function fetchSlots(date) {
     if (!_container) return Promise.resolve([]);
 
     _currentDate = date;
     _selectedSlotId = null;
-    showLoading();
 
-    return fetch('/api/slots/' + date)
-      .then(function (res) {
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        return res.json();
-      })
-      .then(function (data) {
-        var slots = data.slots || [];
-        render(slots);
-        return slots;
-      })
-      .catch(function () {
-        showError();
-        return [];
-      });
+    var slots = generateDemoSlots(date);
+    render(slots);
+    return Promise.resolve(slots);
   }
 
   /* ------------------------------------------------------------------ */
